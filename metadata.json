@@ -1,0 +1,7 @@
+{
+  "uuid": "lockscreen-noblur@local",
+  "name": "Lock Screen: No Blur",
+  "description": "Removes the offscreen blur effect from per-monitor lock screen backgrounds (workaround for black background on one monitor in multi-monitor setups) and dims with a plain overlay instead.",
+  "shell-version": ["50", "51"],
+  "session-modes": ["user", "unlock-dialog"]
+}
