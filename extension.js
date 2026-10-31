@@ -5,7 +5,7 @@ import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 import {UnlockDialog} from 'resource:///org/gnome/shell/ui/unlockDialog.js';
 
 // Replaces the brightness part of Shell.BlurEffect (BLUR_BRIGHTNESS = 0.65 in unlockDialog.js)
-const DIM_ALPHA = 0.65;
+const DIM_ALPHA = 0.35;
 
 export default class LockScreenNoBlur extends Extension {
     enable() {
