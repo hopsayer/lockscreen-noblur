@@ -57,6 +57,18 @@ To change it for an installed extension, edit
 
 and log out and back in (on Wayland the shell has to be restarted to reload the file).
 
+## Compatibility
+
+Tested on GNOME Shell 51.1 and 50.5 (Wayland) with dark and light wallpapers.
+
+The bug is reported on Wayland; on X11 it [reportedly](https://gitlab.gnome.org/GNOME/gnome-shell/-/work_items/3206) does not reproduce, so the extension is probably not needed there.
+
+## Uninstall
+
+```bash
+gnome-extensions uninstall lockscreen-noblur@hopsayer.github.io
+```
+
 ## License
 
 GPL-2.0-or-later
