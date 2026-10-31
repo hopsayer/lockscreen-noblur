@@ -1,8 +1,10 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 import St from 'gi://St';
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 import {UnlockDialog} from 'resource:///org/gnome/shell/ui/unlockDialog.js';
 
-// Replaces the brightness part of Shell.BlurEffect (BLUR_BRIGHTNESS = 0.65)
+// Replaces the brightness part of Shell.BlurEffect (BLUR_BRIGHTNESS = 0.65 in unlockDialog.js)
 const DIM_ALPHA = 0.35;
 
 export default class LockScreenNoBlur extends Extension {
@@ -12,15 +14,17 @@ export default class LockScreenNoBlur extends Extension {
         this._original = original;
 
         proto._createBackground = function (monitorIndex) {
+            const group = this._backgroundGroup;
+            const before = new Set(group.get_children());
+
             original.call(this, monitorIndex);
 
-            // The widget just created is the last child of the background group
-            const group = this._backgroundGroup;
-            const widget = group.get_last_child();
+            // Find the widget that the original method just added
+            const widget = group.get_children().find(child => !before.has(child));
             if (!widget)
                 return;
 
-            // Drop the offscreen blur effect (suspected source of the black actor)
+            // Drop the offscreen blur effect
             widget.remove_effect_by_name('blur');
 
             // Plain dimming overlay as a sibling of the widget, so actors that

@@ -1,7 +1,8 @@
 {
-  "uuid": "lockscreen-noblur@local",
+  "uuid": "lockscreen-noblur@hopsayer.github.io",
   "name": "Lock Screen: No Blur",
-  "description": "Removes the offscreen blur effect from per-monitor lock screen backgrounds (workaround for black background on one monitor in multi-monitor setups) and dims with a plain overlay instead.",
+  "description": "Removes the blur effect from the lock screen background and dims it with a plain overlay instead. Workaround for the lock screen wallpaper turning black on one monitor in multi-monitor setups (gnome-shell#3206).",
   "shell-version": ["50", "51"],
-  "session-modes": ["user", "unlock-dialog"]
+  "session-modes": ["user", "unlock-dialog"],
+  "url": "https://github.com/hopsayer/lockscreen-noblur"
 }
