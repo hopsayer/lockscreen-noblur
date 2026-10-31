@@ -59,7 +59,7 @@ and log out and back in (on Wayland the shell has to be restarted to reload the 
 
 ## Compatibility
 
-Tested on GNOME Shell 51.1 and 50.5 (Wayland) with dark and light wallpapers.
+Tested on GNOME Shell 48.7 (Debian 13, Wayland and X11), 50.5 (Fedora 44, Wayland), and 51.1 (EndeavourOS, Wayland) with dark and light wallpapers. GNOME Shell 45–47 and 49 are declared based on the gnome-shell sources only: the code that the extension patches is the same in 45.0–51.0, but I have not run it on those versions (it's hard to even get them nowadays) and cannot offer support for them.
 
 The bug is reported on Wayland; on X11 it [reportedly](https://gitlab.gnome.org/GNOME/gnome-shell/-/work_items/3206) does not reproduce, so the extension is probably not needed there.
 
